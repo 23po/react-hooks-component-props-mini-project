@@ -4,17 +4,20 @@ import Header from "./Header";
 import About from "./About";
 import ArticleList from "./ArticleList";
 
-console.log(blogData);
+//console.log(blogData);
+const{name,image,about,posts}= blogData;
 
 function App() {
   
+  console.log(blogData.posts)
   return (
     <div className="App">
-      <Header name = {blogData.name}/>
-      <About image = {blogData.image} about = {blogData.about} />
-      <ArticleList Articles = {blogData.posts} /> 
+      <Header name = {name}/>
+      <About image = {image} about = {about} />
+      <ArticleList posts = {posts} />   
     </div>
   );
+  
 }
 
 export default App;
